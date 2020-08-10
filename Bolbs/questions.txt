@@ -1,0 +1,5 @@
+question:
+If there's 3 blobs, one of dimension 3, one of dimension 2 and one of dimension 1. 
+The blob of dimension 1 stays where it is.
+the blob of dimension 2 goes toward the one of dimension 2
+the blob of dimension 3 stays goes towards blob 2 or blob 3?

@@ -64,13 +64,17 @@
 
 
 
-import os
-import time
-
-def clear():
-    os.system( 'cls' )
-#clear = lambda: os.system('clear')
-print("Gabs smells ")
-time.sleep(5)
-clear()
-print("Just kidding!")
+# import os
+# import time
+#
+# def clear():
+#     os.system( 'cls' )
+# #clear = lambda: os.system('clear')
+# print(" Hello ")
+# time.sleep(5)
+# clear()
+# print("World!")
+import sys
+input1 = sys.argv[1]
+#input1 = input()
+print(input1)

@@ -56,7 +56,7 @@ def closest_blob(x1,x2, blobs, index):
         #print("just one blob to move towards")
         return blobs[0]
     else:
-        index_closest_blob = []
+        # index_closest_blob = []
         for blob in blobs:
             distances.append(euclidian_distance(x1,x2,blob[0], blob[1]))
 
@@ -65,7 +65,7 @@ def closest_blob(x1,x2, blobs, index):
         return closest_blob
 
 
-def move(blob, blob_index, x_location,y_location):
+def move(blob, x_location,y_location):
     '''given a blob and a location,
     return the blob with the location updated to move a single step towards location'''
 
@@ -169,9 +169,9 @@ def euclidian_distance(x1, y1, x2, y2):
 
 if __name__ == '__main__':
 
-    #blobs = [(0, 2, 1), (2, 1, 2)]
+    blobs = [(0, 2, 1), (2, 1, 2)]
     #blobs = get_blobs()
-    blobs = [(4, 3, 4), (4, 6, 2), (8, 3, 2), (2, 1, 3)]
+    #blobs = [(4, 3, 4), (4, 6, 2), (8, 3, 2), (2, 1, 3)]
     #blobs = [(-57, -16, 10),(-171, -158, 13),(-84, 245, 15),(-128, -61, 16),(65, 196, 4),(-221, 121, 8),(145, 157, 3),(-27, -75, 5)] ### need to find a way to display this
     #print(blobs)
     number_of_blobs_that_do_not_move: int = 0
@@ -217,7 +217,7 @@ if __name__ == '__main__':
             else:
                 #index_blob_staying_still = blob_moves[0]
                 #print(f"blob moves {blob_moves}")#, index_still_blob, blob_moves[0],)
-                new_blobs.append(move(blobs[index_still_blob], index_still_blob, blob_moves[0],blob_moves[1]))
+                new_blobs.append(move(blobs[index_still_blob],blob_moves[0],blob_moves[1]))
 
         blobs = merge_blobs(new_blobs)
 

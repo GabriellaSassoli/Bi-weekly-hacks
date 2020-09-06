@@ -1,0 +1,5 @@
+blobs_smaller_than(blob, blobs) -- given a single blob and a list of other blobs, return a list of blobs that are smaller than blob
+closest_blob(location, blobs) -- given a location and a list of blobs, return the blob from the list which is closest to the location
+move(blob, location) -- given a blob and a location, return the blob with the location updated to move a single step towards location
+merge_blobs(blobs) -- given list of blobs, return the list with all blobs that are in the same location merged together
+display_world(width, height, blobs) -- given a width and height and a list of blobs, draw the world

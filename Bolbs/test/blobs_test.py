@@ -1,6 +1,5 @@
 
 import src.Blobs as bl
-
 import unittest
 
 blobs = [(0, 2, 1), (2, 1, 2)]

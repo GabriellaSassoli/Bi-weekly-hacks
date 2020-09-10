@@ -1,8 +1,8 @@
 from collections import defaultdict
 import math
-import numpy as np
 import os
 import time
+
 
 
 def get_blobs():
@@ -123,42 +123,72 @@ def is_blob_to_add(index, blob_merged):
 
 def find_hight_and_with_matrix( blobs ):
     ''' given a list of blob find hight and with of the matrix to create'''
-    x: int = 0;
-    y: int = 0;
+    x_max: int = 0
+    x_min: int = 0
+    y_max: int = 0
+    y_min: int = 0
 
     for blob in blobs:
         print(blob)
 
-        if x < blob[0]:
-            x = blob[0]
+        if x_max < blob[0]:
+            x_max = blob[0]
+            print(x_max)
+        if x_min > blob[0]:
+            x_min = blob[0]
 
-        if y < blob[1]:
-            y = blob[1]
+        if y_max < blob[1]:
+            y_max = blob[1]
 
-    #print(x, y)
-    return x,y
+        if y_min > blob[1]:
+            y_min = blob[1]
+
+    print(f"this is x_min:{x_min}\nthis is x_max:{x_max}\nthis is y_min:{y_min}\nthis is y_max:{y_max}\n")
+    return x_min,y_min,x_max,y_max
 
 def clear():
     os.system( 'cls' )
 
-def display_world(width, height, blobs):
+def is_blob(i,j,blobs):
+    positions = []
+    for blob in blobs:
+        # print(f"i {i} and j {j}")
+        # print()
+        # print(blob[0] == i and blob[1] == j)
+        if blob[0] == i and blob[1] == j:
+            positions.append(blob[2])
+    return positions
+
+def display_world(x_min,y_min,x_max,y_max, blobs):
     ''' given a width and height and a list of blobs, draw the world'''
     time.sleep(1.5)
     clear()
 
-    world = np.zeros(shape=(width + 1, height + 1), dtype= int)
+    #world = np.zeros(shape=(width + 1, height + 1), dtype= int)
+    #
+    # for blob in blobs:
+    #     world[blob[0], blob[1]] = blob[2]
 
-    for blob in blobs:
-        world[blob[0], blob[1]] = blob[2]
-
-    for i in world:
-        for j in i:
-            if j == 0:
-                print('.', end="  ")
+###finding max
+    for i in range(x_min,x_max+1):
+        for j in range(y_min,y_max + 1 ):
+            blob_value = is_blob(i,j,blobs)
+            if blob_value:
+                print(blob_value[0],end="  ")
             else:
-                print(j, end= " ")
+                print(".", end= " ")
+            # print(j)
+            # print([x[0] for x in blobs])
+            # print([y[1] for y in blobs] == j)
+            # for blob in blobs:
+            #     print(blob)
+            # # print([x[0] for x in blobs] == i and [y[1] for y in blobs] == j)
+            # # if False:
+            # #     print(blobs[2], end="  ")
+            # # else:
+            # print(".", end= " ")
         print()
-    #print('\n'.join(' '.join(map(str, x)) for x in world)) ottimo ma  non so come mettere l'if statement
+    # #print('\n'.join(' '.join(map(str, x)) for x in world)) ottimo ma  non so come mettere l'if statement
 
     print()
 
@@ -169,60 +199,47 @@ def euclidian_distance(x1, y1, x2, y2):
 
 if __name__ == '__main__':
 
-    blobs = [(0, 2, 1), (2, 1, 2)]
+    #blobs = [(0, 2, 1), (2, 1, 2)]
     #blobs = get_blobs()
     #blobs = [(4, 3, 4), (4, 6, 2), (8, 3, 2), (2, 1, 3)]
+    blobs = [(-5,2,1), (3,0,3),(0,5,4)]
     #blobs = [(-57, -16, 10),(-171, -158, 13),(-84, 245, 15),(-128, -61, 16),(65, 196, 4),(-221, 121, 8),(145, 157, 3),(-27, -75, 5)] ### need to find a way to display this
     #print(blobs)
     number_of_blobs_that_do_not_move: int = 0
 
-    width, hight = find_hight_and_with_matrix(blobs)
+    x_min,y_min,x_max,y_max = find_hight_and_with_matrix(blobs)
     print(f"This is the first array of blobs {blobs}")
 
 ### finding the correlation between blobs
     while len(blobs) > 1:
     #while number_of_blobs_that_do_not_move  <= len(blobs):
 
-        display_world(width, hight, blobs)
+        display_world(x_min,y_min,x_max,y_max, blobs)
         blob_bigger_than_blobs = defaultdict(list)
         for i in range(0, len(blobs)):
             smaller_blobs = blobs_smaller_than(i,blobs)
             blob_bigger_than_blobs[i] = blobs_smaller_than(i,blobs)
-        #print(blob_bigger_than_blobs)
 
     ##finding closest blob by blobs
         blob_moves_towards_blob = defaultdict(list) ###the key will be the blob that needs to move and the value is the one that stays still
         #print(blob_bigger_than_blobs)
         for key, value in list(blob_bigger_than_blobs.items()):
-            #print( key, value )
-
-           # print(closest_blob(blobs[key][0], blobs[key][1], [blobs[x] for x in value], value))
-            #print(f"Analyzing blob {key}")
             blob_moves_towards_blob[key] = closest_blob(blobs[key][0], blobs[key][1], [blobs[x] for x in value], value)
-
-        # print("The key is the blob that we are considering and the value is the closest blob")
-        # print(blob_moves_towards_blob)
-        #closest_blob(location, blob)
 
     ##moving blob towards the closest one
         new_blobs = []
 
         for index_still_blob,blob_moves in list(blob_moves_towards_blob.items()):
-            #print(key,value)
             if not blob_moves:
-                #print(f"the blob {key} doesn't have to move")
                 number_of_blobs_that_do_not_move = number_of_blobs_that_do_not_move + 1
                 new_blobs.append(blobs[index_still_blob])
 
             else:
-                #index_blob_staying_still = blob_moves[0]
-                #print(f"blob moves {blob_moves}")#, index_still_blob, blob_moves[0],)
+
                 new_blobs.append(move(blobs[index_still_blob],blob_moves[0],blob_moves[1]))
 
         blobs = merge_blobs(new_blobs)
-
-        # print(f"Merged blobs {blobs}")
     else:
-        display_world(width, hight, blobs)
+        display_world(x_min,y_min,x_max,y_max, blobs)
         print(f"The program is finished. the last blob is {blobs}")
 

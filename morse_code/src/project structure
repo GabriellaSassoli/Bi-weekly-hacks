@@ -1,6 +1,0 @@
--- Create dictionary
--- Reading word from screen
--- Find combination of letters that can form that word:
-        -- try every single letter from alphabet start with a and get to z and as soon as first letter is found move to the next one and carry on ( for loop so it can go though all the letters of the alphabet)
-        This could be implemented with recursive find letter function
--- Print all solutions

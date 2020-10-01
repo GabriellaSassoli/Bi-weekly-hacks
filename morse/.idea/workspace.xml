@@ -2,24 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8eb6e07b-d9ec-47c1-b292-f1c3417ffe46" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Morse/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Morse/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Bolbs/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Bolbs/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Bolbs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Bolbs/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Bolbs/Blobs.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Bolbs/Blobs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Bolbs/test/blobs_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Bolbs/test/blobs_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Morse/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Morse/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Morse/Decode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Morse/Decode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Morse/Encode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Morse/Encode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Morse/EncodeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Morse/EncodeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Morse/FindMorseWithNWords.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Morse/FindWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Morse/FindWord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Morse/FindWordTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Morse/FindWordTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Morse/FindWordWithLength.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Morse/MorseDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Morse/MorseDictionary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Morse/MorseDictionaryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Morse/MorseDictionaryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Morse/ReadWordsFromFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Morse/ReadWordsFromFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Morse/ReadingWordsToEncodeFromFile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Morse/Word.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Morse/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Morse/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +32,50 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Morse" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Morse" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Morse" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build setup" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Morse" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="help" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -56,8 +99,98 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Bolbs/src/Java_solution" />
+    <property name="project.structure.last.edited" value="Facets" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
     <property name="show.unlinked.gradle.project.popup" value="true" />
+  </component>
+  <component name="RunManager" selected="JUnit.MorseDictionaryTest.testletterA">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Morse.App" />
+      <module name="Morse.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Morse.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EncodeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Morse.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Morse.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Morse" />
+      <option name="MAIN_CLASS_NAME" value="Morse.EncodeTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EncodeTest.testEncode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Morse.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Morse.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Morse" />
+      <option name="MAIN_CLASS_NAME" value="Morse.EncodeTest" />
+      <option name="METHOD_NAME" value="testEncode" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MorseDictionaryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Morse.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Morse.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Morse" />
+      <option name="MAIN_CLASS_NAME" value="Morse.MorseDictionaryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MorseDictionaryTest.testletterA" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Morse.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Morse.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Morse" />
+      <option name="MAIN_CLASS_NAME" value="Morse.MorseDictionaryTest" />
+      <option name="METHOD_NAME" value="testletterA" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MorseDictionaryTest.testletterA" />
+        <item itemvalue="JUnit.MorseDictionaryTest" />
+        <item itemvalue="JUnit.EncodeTest" />
+        <item itemvalue="JUnit.EncodeTest.testEncode" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -73,9 +206,67 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2660" y="275" key="FileChooserDialogImpl" timestamp="1600883591325">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1601145907556">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1600885885600" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1601145907556" />
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1601500901424">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="491" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601328513325" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1600943677424" />
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601500901424" />
+    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1601500901423">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="491" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601328513325" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1600943677424" />
+    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601500901423" />
+    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1601500901423">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="491" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601328513324" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1600943677423" />
+    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601500901423" />
+    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1601500901424">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="491" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601328513325" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1600943677424" />
+    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601500901424" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1601282136920">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601282136920" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601146304349" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1601282136920">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601282136920" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601146304348" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1601282136920">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601282136920" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601146304348" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1601282136920">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601282136920" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601146304348" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1601144541478">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2381" y="162" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1600884508811" />
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1601144541478" />
+    <state x="2262" y="132" key="new project wizard" timestamp="1600884419618">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1600883591325" />
+    <state x="2262" y="132" key="new project wizard/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1600884419618" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1601498174228">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1601498174228" />
   </component>
 </project>

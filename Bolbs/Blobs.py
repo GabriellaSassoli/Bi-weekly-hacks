@@ -127,25 +127,54 @@ def find_hight_and_with_matrix( blobs ):
     y: int = 0;
 
     for blob in blobs:
-        print(blob)
 
+<<<<<<< Updated upstream:Bolbs/Blobs.py
         if x < blob[0]:
             x = blob[0]
+=======
+        if x_max < blob[0]:
+            x_max = blob[0]
+
+        if x_min > blob[0]:
+            x_min = blob[0]
+
+        if y_max < blob[1]:
+            y_max = blob[1]
+>>>>>>> Stashed changes:Bolbs/src/Blobs.py
 
         if y < blob[1]:
             y = blob[1]
 
+<<<<<<< Updated upstream:Bolbs/Blobs.py
     #print(x, y)
     return x,y
+=======
+    #print(f"this is x_min:{x_min}\nthis is x_max:{x_max}\nthis is y_min:{y_min}\nthis is y_max:{y_max}\n")
+    return x_min,y_min,x_max,y_max
+>>>>>>> Stashed changes:Bolbs/src/Blobs.py
 
 def clear():
     os.system( 'cls' )
 
+<<<<<<< Updated upstream:Bolbs/Blobs.py
 def display_world(width, height, blobs):
+=======
+def is_blob(i,j,blobs):
+    positions = []
+    for blob in blobs:
+
+        if blob[0] == i and blob[1] == j:
+            positions.append(blob[2])
+
+    return positions
+
+def display_world(x_min,y_min,x_max,y_max, blobs):
+>>>>>>> Stashed changes:Bolbs/src/Blobs.py
     ''' given a width and height and a list of blobs, draw the world'''
     time.sleep(1.5)
     clear()
 
+<<<<<<< Updated upstream:Bolbs/Blobs.py
     world = np.zeros(shape=(width + 1, height + 1), dtype= int)
 
     for blob in blobs:
@@ -159,19 +188,34 @@ def display_world(width, height, blobs):
                 print(j, end= " ")
         print()
     #print('\n'.join(' '.join(map(str, x)) for x in world)) ottimo ma  non so come mettere l'if statement
+=======
+###finding max
+    for i in range(x_min,x_max+1):
+        for j in range(y_min,y_max + 1 ):
+            blob_value = is_blob(i,j,blobs)
+            if blob_value:
+                print(blob_value[0],end="  ")
+            else:
+                print(".", end= " ")
+>>>>>>> Stashed changes:Bolbs/src/Blobs.py
 
+        print()
     print()
 
 def euclidian_distance(x1, y1, x2, y2):
     return math.sqrt(math.pow(x1-x2, 2)+ math.pow(y1-y2,2))
 
 
-
 if __name__ == '__main__':
 
-    #blobs = [(0, 2, 1), (2, 1, 2)]
+    blobs = [(0, 2, 1), (2, 1, 2)]
     #blobs = get_blobs()
+<<<<<<< Updated upstream:Bolbs/Blobs.py
     blobs = [(4, 3, 4), (4, 6, 2), (8, 3, 2), (2, 1, 3)]
+=======
+    #blobs = [(4, 3, 4), (4, 6, 2), (8, 3, 2), (2, 1, 3)]
+    #blobs = [(-5,2,1), (3,0,3),(0,5,6)]
+>>>>>>> Stashed changes:Bolbs/src/Blobs.py
     #blobs = [(-57, -16, 10),(-171, -158, 13),(-84, 245, 15),(-128, -61, 16),(65, 196, 4),(-221, 121, 8),(145, 157, 3),(-27, -75, 5)] ### need to find a way to display this
     #print(blobs)
     number_of_blobs_that_do_not_move: int = 0

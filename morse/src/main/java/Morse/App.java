@@ -3,12 +3,56 @@
  */
 package Morse;
 
-public class App {
-    public String getGreeting() {
-        return "Hello world.";
-    }
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+public class App {
+
+
+
+    public static void main(String[] args) throws IOException {
+        String word;
+        Scanner in = new Scanner(System.in);
+        int choice;
+        Map<String, String> wordMorse = new HashMap<String, String>();
+        Map<String, List<String>> morseWord = new HashMap<String, List<String>>();
+
+        System.out.println("Type:\n1: If you want to encode a word; \n2: If you want the 1st challenge; \n");
+        choice = Integer.parseInt(in.nextLine());
+
+        if (choice == 1) {
+
+            System.out.println("Type word to encode: ");
+            word = in.nextLine();
+            System.out.println("You typed: " + word);
+            Encode encode = new Encode(word);
+
+            System.out.println("smorse( " + word + " ) => " + encode.EncodeWord());
+        }
+
+        else if(choice == 2) {
+            System.out.print("Number 2\n");
+            MorseDictionary morseDictionary = new MorseDictionary();
+            FindWord findWord = new FindWord();
+            ReadWordsFromFile words = new ReadWordsFromFile();
+            morseWord = morseDictionary.getMorseWord(words);
+            wordMorse = morseDictionary.getWordMorse(words);
+            int numberOfWords = 0;
+
+            System.out.println("Type how many words a morse word should corrispond to: ");
+            if(in.hasNextInt()) {
+                numberOfWords = in.nextInt();
+            }
+            else{
+                System.out.println("Sorry you didn't insert a number");
+            }
+
+            System.out.println("The morse word are/is " + findWord.getMorseWord(numberOfWords, morseWord));
+        }
+        else {System.out.println("Sorry, but your choice is incorrect");}
     }
 }

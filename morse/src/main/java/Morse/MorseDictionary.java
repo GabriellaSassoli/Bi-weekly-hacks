@@ -62,6 +62,7 @@ public class MorseDictionary {
             if (this.morseWord.containsKey(encodedWord)) {
                 this.morseWord.get(encodedWord).add(word);
             } else {
+
                 this.morseWord.put(encodedWord, new ArrayList<String>());
                 this.morseWord.get(encodedWord).add(word);
             }

@@ -9,24 +9,41 @@ import java.util.Map;
 
 public class FindWord {
     private int numberOfWords;
+    MorseDictionary morseDictionary = new MorseDictionary();
+    ReadWordsFromFile words = new ReadWordsFromFile();
+    Map<String, List<String>> morseWordDictionary = morseDictionary.getMorseWord(words);
 
 
-    public FindWord(){}
+    public FindWord() throws IOException {}
 
-    public ArrayList<String> getMorseWord(int numberOfWords, Map<String, List<String>> morseWordDictionary) throws IOException {
+    public ArrayList<String> getMorseWord(int numberOfWords) throws IOException {
+
         this.numberOfWords = numberOfWords;
-        ArrayList<String> morseWord = new ArrayList<String>();
+        ArrayList<String> morseWordList = new ArrayList<String>();
 
-        for (Map.Entry<String, List<String>> entry : morseWordDictionary.entrySet()) {
+        System.out.println("The morse word are:\n " );
+        for (Map.Entry<String, List<String>> entry : this.morseWordDictionary.entrySet()) {
             //System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
 
             if(entry.getValue().size() == numberOfWords){
-                morseWord.add(entry.getKey());
+                morseWordList.add(entry.getKey());
+                System.out.println(entry.getKey() + ": " +  entry.getValue());
             }
         }
 
-        System.out.println("The morse word is " + morseWord);
+        return morseWordList;
+    }
 
-        return morseWord;
+    public List<String> getUniqueWord(String uniqueElement){
+        List<String> uniqueWords = new ArrayList<>();
+        for (Map.Entry<String, List<String>> entry : this.morseWordDictionary.entrySet()) {
+
+            if (entry.getKey().contains(uniqueElement)){
+                    uniqueWords = entry.getValue();
+            }
+
+        }
+        return uniqueWords;
+
     }
 }

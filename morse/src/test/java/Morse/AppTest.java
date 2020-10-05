@@ -3,12 +3,14 @@
  */
 package Morse;
 
-import
 import org.junit.Test;
+
+import java.io.IOException;
+
 import static org.junit.Assert.*;
 
 public class AppTest {
-    @Test public void testEncode() {
+    @Test public void testEncode() throws IOException {
         //given
         Encode encode = new Encode("sos");
         //when

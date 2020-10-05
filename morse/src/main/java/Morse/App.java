@@ -18,10 +18,10 @@ public class App {
         String word;
         Scanner in = new Scanner(System.in);
         int choice;
-        Map<String, String> wordMorse = new HashMap<String, String>();
-        Map<String, List<String>> morseWord = new HashMap<String, List<String>>();
+       // Map<String, String> wordMorse = new HashMap<String, String>();
 
-        System.out.println("Type:\n1: If you want to encode a word; \n2: If you want the 1st challenge; \n");
+
+        System.out.println("Type:\n1: If you want to encode a word; \n2: If you want the 1st challenge; \n3: If you want to find a morse word with a specific pattern");
         choice = Integer.parseInt(in.nextLine());
 
         if (choice == 1) {
@@ -36,11 +36,9 @@ public class App {
 
         else if(choice == 2) {
             System.out.print("Number 2\n");
-            MorseDictionary morseDictionary = new MorseDictionary();
+
             FindWord findWord = new FindWord();
-            ReadWordsFromFile words = new ReadWordsFromFile();
-            morseWord = morseDictionary.getMorseWord(words);
-            wordMorse = morseDictionary.getWordMorse(words);
+            //wordMorse = morseDictionary.getWordMorse(words);
             int numberOfWords = 0;
 
             System.out.println("Type how many words a morse word should corrispond to: ");
@@ -51,7 +49,20 @@ public class App {
                 System.out.println("Sorry you didn't insert a number");
             }
 
-            System.out.println("The morse word are/is " + findWord.getMorseWord(numberOfWords, morseWord));
+            System.out.println("The morse word are/is " + findWord.getMorseWord(numberOfWords));
+        }
+        else if(choice == 3) {
+            System.out.print("Number 3\n");
+
+            FindWord findWord = new FindWord();
+            //wordMorse = morseDictionary.getWordMorse(words);
+            String pattern;
+
+            System.out.println("Type pattern to match: ");
+            pattern = in.next();
+            System.out.println(pattern);
+
+            System.out.println("The morse word are/is " + findWord.getUniqueWord(pattern));
         }
         else {System.out.println("Sorry, but your choice is incorrect");}
     }

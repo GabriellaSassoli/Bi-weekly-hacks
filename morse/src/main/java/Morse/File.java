@@ -4,7 +4,7 @@ import java.io.*;
 import java.net.URL;
 import java.util.*;
 
-public class ReadWordsFromFile {
+public class File {
 
     //ATM if a morse word has more than one translation, just the last one has been save as value for that key"
     //have to find the way to save more than one or to get keys that have the same value from a dictionary
@@ -12,8 +12,8 @@ public class ReadWordsFromFile {
     private List<String> inputLine = new ArrayList<String>();
 
 
-    public ReadWordsFromFile() throws IOException {
-        this.fileName = "https://raw.githubusercontent.com/dolph/dictionary/master/enable1.txt";
+    public File(String fileName) throws IOException {
+        this.fileName = fileName;
         URL url = new URL(fileName);
         BufferedReader myReader = new BufferedReader(new InputStreamReader(url.openStream()));
 

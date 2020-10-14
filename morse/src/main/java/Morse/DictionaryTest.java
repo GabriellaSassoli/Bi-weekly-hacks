@@ -8,12 +8,13 @@ import java.util.Map;
 
 import static org.junit.Assert.*;
 
-public class MorseDictionaryTest {
+public class DictionaryTest {
+    private String filename = "https://raw.githubusercontent.com/dolph/dictionary/master/enable1.txt";
 
     @Test
     public void testletterA() throws IOException {
         //given
-        MorseDictionary morseDictionary = new MorseDictionary();
+        Dictionary morseDictionary = new Dictionary();
        //when
         //then
         assertEquals(".-", morseDictionary.getMorseDictionary().get('a') );
@@ -26,10 +27,12 @@ public class MorseDictionaryTest {
     @Test
     public void testGetWordMorse() throws IOException {
         //given
-        ReadWordsFromFile file = new ReadWordsFromFile();
+        File file = new File(this.filename);
         //when
-        MorseDictionary morseDictionary = new MorseDictionary();
-        Map<String, String> wordMorse = morseDictionary.getWordMorse(file);
+        Dictionary morseDictionary = new Dictionary();
+        morseDictionary.WordMorseDictionary(file);
+        Map<String, String> wordMorse = morseDictionary.getWordMorseDictionary();
+
         String sos = "...---..."; //sos
         String daily = "-...-...-..-.--";
         String programmer = ".--..-.-----..-..-----..-.";
@@ -51,11 +54,12 @@ public class MorseDictionaryTest {
     @Test
     public void testGetMorseWord() throws IOException {
         //given
-        ReadWordsFromFile file = new ReadWordsFromFile();
+        File file = new File(this.filename);
 
         //when
-        MorseDictionary morseDictionary = new MorseDictionary();
-        Map<String, List<String>> morseWord = morseDictionary.getMorseWord(file);
+        Dictionary morseDictionary = new Dictionary();
+        morseDictionary.MorseWordDictionary(file);
+        Map<String, List<String>> morseWord = morseDictionary.getMorseWordDictionary();
    ;
 
         //then

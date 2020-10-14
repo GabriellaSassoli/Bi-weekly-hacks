@@ -3,18 +3,15 @@ package Morse;
 import org.junit.Test;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 import static org.junit.Assert.*;
 
-public class FindWordTest {
-
+public class WordTest {
+    private String filename = "https://raw.githubusercontent.com/dolph/dictionary/master/enable1.txt";
     @Test
     public void testMorseWord13() throws IOException {
         //given
-        FindWord findWord = new FindWord();
+        Words findWord = new Words(this.filename);
 
         //when
         int numberOfWords = 13;
@@ -28,7 +25,7 @@ public class FindWordTest {
     @Test
     public void testMorseWordWrong() throws IOException {
         //given
-        FindWord findWord = new FindWord();
+        Words findWord = new Words(this.filename);
 
         //when
         int numberOfWords = 13;
@@ -43,7 +40,7 @@ public class FindWordTest {
     public void testMorseWord10() throws IOException {
 
         //given
-        FindWord findWord = new FindWord();
+        Words findWord = new Words(this.filename);
 
         //when
         int numberOfWords = 10;
@@ -57,7 +54,7 @@ public class FindWordTest {
     @Test
     public void testGetWordsContaining() throws IOException {
         //given
-        FindWord findWord = new FindWord();
+        Words findWord = new Words(this.filename);
 
         //when
         String characters = "---------------";
@@ -71,7 +68,7 @@ public class FindWordTest {
     @Test
     public void testGetWordsContaining2() throws IOException {
         //given
-        FindWord findWord = new FindWord();
+        Words findWord = new Words(this.filename);
 
         //when
         String characters = "--------------";
@@ -84,7 +81,7 @@ public class FindWordTest {
     @Test
     public void testGetBalancedWordContains() throws IOException {
         //given
-        FindWord findWord = new FindWord();
+        Words findWord = new Words(this.filename);
 
         //when
         int numberOfLetters = 21;
@@ -97,7 +94,7 @@ public class FindWordTest {
     @Test
     public void testGetBalancedWordSize() throws IOException {
         //given
-        FindWord findWord = new FindWord();
+        Words findWord = new Words(this.filename);
 
         //when
         int numberOfLetters = 21;

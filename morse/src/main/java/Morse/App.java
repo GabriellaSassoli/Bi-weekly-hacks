@@ -3,11 +3,7 @@
  */
 package Morse;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import java.util.Scanner;
 
 public class App {
@@ -18,10 +14,11 @@ public class App {
         String word;
         Scanner in = new Scanner(System.in);
         int choice;
+        Words findWord = new Words("https://raw.githubusercontent.com/dolph/dictionary/master/enable1.txt");
        // Map<String, String> wordMorse = new HashMap<String, String>();
 
 
-        System.out.println("Type:\n1: If you want to encode a word; \n2: If you want the 1st challenge; \n3: If you want to find a morse word with a specific pattern");
+        System.out.println("Type:\n1: If you want to encode a word; \n2: If you want the 1st challenge; \n3: If you want to find a morse word with a specific pattern\n4:To find the balanced words");
         choice = Integer.parseInt(in.nextLine());
 
         if (choice == 1) {
@@ -29,41 +26,53 @@ public class App {
             System.out.println("Type word to encode: ");
             word = in.nextLine();
             System.out.println("You typed: " + word);
-            Encode encode = new Encode(word);
+            Translator translator = new Translator(word);
 
-            System.out.println("smorse( " + word + " ) => " + encode.EncodeWord());
+            System.out.println("smorse( " + word + " ) => " + translator.Encode());
         }
 
         else if(choice == 2) {
             System.out.print("Number 2\n");
 
-            FindWord findWord = new FindWord();
             //wordMorse = morseDictionary.getWordMorse(words);
             int numberOfWords = 0;
 
             System.out.println("Type how many words a morse word should corrispond to: ");
             if(in.hasNextInt()) {
                 numberOfWords = in.nextInt();
+                System.out.println("The morse word are/is " + findWord.getMorseWord(numberOfWords));
             }
             else{
                 System.out.println("Sorry you didn't insert a number");
             }
 
-            System.out.println("The morse word are/is " + findWord.getMorseWord(numberOfWords));
         }
         else if(choice == 3) {
             System.out.print("Number 3\n");
 
-            FindWord findWord = new FindWord();
-            //wordMorse = morseDictionary.getWordMorse(words);
             String pattern;
-
             System.out.println("Type pattern to match: ");
             pattern = in.next();
             System.out.println(pattern);
 
-            System.out.println("The morse word are/is " + findWord.getUniqueWord(pattern));
+            System.out.println("The morse word are/is " + findWord.getWordsContaining(pattern));
         }
+        else if(choice == 4){
+            System.out.println("Number 4");
+            int numberOfLetters = 0;
+            System.out.println("Type number of letters of the word that has to be balanced: ");
+            if(in.hasNextInt()) {
+                numberOfLetters = in.nextInt();
+                System.out.println("You have typed " + numberOfLetters);
+                System.out.println("The morse word are/is " + findWord.getBalancedWord(numberOfLetters));
+            }
+            else{
+                System.out.println("Sorry you didn't insert a number");
+            }
+
+        }
+
         else {System.out.println("Sorry, but your choice is incorrect");}
     }
+
 }

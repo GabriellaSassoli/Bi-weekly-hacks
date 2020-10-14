@@ -6,7 +6,7 @@ import java.io.IOException;
 
 import static org.junit.Assert.*;
 
-public class EncodeTest {
+public class TranslatorTest {
     @Test public void testEncode() throws IOException {
         //given
         Translator encodesos = new Translator("sos");

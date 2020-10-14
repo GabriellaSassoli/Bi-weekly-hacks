@@ -1,21 +1,25 @@
 package Morse;
 
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class FindWord {
+public class Words {
     private int numberOfWords;
-    MorseDictionary morseDictionary = new MorseDictionary();
-    ReadWordsFromFile words = new ReadWordsFromFile();
-    Map<String, List<String>> morseWordDictionary = morseDictionary.getMorseWord(words);
-    Map <String, String> wordMorseDictionary = morseDictionary.getWordMorse(words);
+    Dictionary morseDictionary = new Dictionary();
+    File words;
+    Map<String, List<String>> morseWordDictionary;
+    Map <String, String> wordMorseDictionary;
 
 
-    public FindWord() throws IOException {}
+    public Words(String filename) throws IOException {
+        this.words = new File(filename);
+        morseDictionary.MorseWordDictionary(this.words);
+        morseDictionary.WordMorseDictionary(this.words);
+        this.morseWordDictionary = morseDictionary.getMorseWordDictionary();
+        this.wordMorseDictionary = morseDictionary.getWordMorseDictionary();
+    }
 
     public ArrayList<String> getMorseWord(int numberOfWords) throws IOException {
 

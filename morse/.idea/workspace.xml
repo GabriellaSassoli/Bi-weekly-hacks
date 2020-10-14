@@ -2,10 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8eb6e07b-d9ec-47c1-b292-f1c3417ffe46" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Morse/MorseDictionaryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Morse/MorseDictionaryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Morse/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Morse/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Morse/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Morse/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Morse/Decode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Morse/Encode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Morse/EncodeTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Morse/FindWord.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Morse/FindWordTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Morse/MorseDictionary.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Morse/MorseDictionaryTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Morse/ReadWordsFromFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Morse/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Morse/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Morse/Decode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Morse/Dictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Morse/Dictionary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Morse/DictionaryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Morse/DictionaryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Morse/Encode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Morse/EncodeTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Morse/File.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Morse/File.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Morse/FileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Morse/FileTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Morse/FindWord.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Morse/FindWordTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Morse/MorseDictionary.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Morse/MorseDictionaryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Morse/ReadWordsFromFile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Morse/Translator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Morse/Translator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Morse/TranslatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Morse/TranslatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Morse/WordTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Morse/WordTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Morse/Words.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Morse/Words.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +93,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="GitIgnore" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Bolbs/src/Java_solution" />
     <property name="project.structure.last.edited" value="Facets" />
     <property name="project.structure.proportion" value="0.15" />
@@ -77,21 +101,8 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
     <property name="show.unlinked.gradle.project.popup" value="true" />
   </component>
-  <component name="RunManager" selected="Application.App">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Morse.App" />
-      <module name="Morse.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Morse.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FindWordTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.FileTest">
+    <configuration name="DictionaryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Morse.main" />
       <extension name="coverage">
         <pattern>
@@ -100,13 +111,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Morse" />
-      <option name="MAIN_CLASS_NAME" value="Morse.FindWordTest" />
+      <option name="MAIN_CLASS_NAME" value="Morse.DictionaryTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FindWordTest.testMorseWord" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FileTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Morse.main" />
       <extension name="coverage">
         <pattern>
@@ -115,29 +126,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Morse" />
-      <option name="MAIN_CLASS_NAME" value="Morse.FindWordTest" />
-      <option name="METHOD_NAME" value="testMorseWord" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MorseDictionaryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Morse.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Morse.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Morse" />
-      <option name="MAIN_CLASS_NAME" value="Morse.MorseDictionaryTest" />
+      <option name="MAIN_CLASS_NAME" value="Morse.FileTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MorseDictionaryTest.testletterA" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FileTest.testReadingFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Morse.main" />
       <extension name="coverage">
         <pattern>
@@ -146,20 +141,51 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Morse" />
-      <option name="MAIN_CLASS_NAME" value="Morse.MorseDictionaryTest" />
-      <option name="METHOD_NAME" value="testletterA" />
+      <option name="MAIN_CLASS_NAME" value="Morse.FileTest" />
+      <option name="METHOD_NAME" value="testReadingFile" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileTest.testWordsInFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Morse.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Morse.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Morse" />
+      <option name="MAIN_CLASS_NAME" value="Morse.FileTest" />
+      <option name="METHOD_NAME" value="testWordsInFile" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TranslatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Morse.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Morse.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Morse" />
+      <option name="MAIN_CLASS_NAME" value="Morse.TranslatorTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.App" />
-        <item itemvalue="JUnit.FindWordTest" />
-        <item itemvalue="JUnit.FindWordTest.testMorseWord" />
-        <item itemvalue="JUnit.MorseDictionaryTest" />
-        <item itemvalue="JUnit.MorseDictionaryTest.testletterA" />
+        <item itemvalue="JUnit.FileTest" />
+        <item itemvalue="JUnit.FileTest.testWordsInFile" />
+        <item itemvalue="JUnit.FileTest.testReadingFile" />
+        <item itemvalue="JUnit.DictionaryTest" />
+        <item itemvalue="JUnit.TranslatorTest" />
       </list>
     </recent_temporary>
   </component>
@@ -177,35 +203,39 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="582" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1602704651428">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="582" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602704651428" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1601145907556">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1600885885600" />
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1601145907556" />
-    <state width="1877" height="464" key="GridCell.Tab.0.bottom" timestamp="1601933852455">
+    <state width="1877" height="351" key="GridCell.Tab.0.bottom" timestamp="1602709519699">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="491" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601328513325" />
     <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1600943677424" />
-    <state width="1877" height="464" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601933852455" />
-    <state width="1877" height="464" key="GridCell.Tab.0.center" timestamp="1601933852455">
+    <state width="1877" height="351" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602709519699" />
+    <state width="1877" height="351" key="GridCell.Tab.0.center" timestamp="1602709519699">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="491" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601328513325" />
     <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1600943677424" />
-    <state width="1877" height="464" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601933852455" />
-    <state width="1877" height="464" key="GridCell.Tab.0.left" timestamp="1601933852455">
+    <state width="1877" height="351" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602709519699" />
+    <state width="1877" height="351" key="GridCell.Tab.0.left" timestamp="1602709519699">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="491" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601328513324" />
     <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1600943677423" />
-    <state width="1877" height="464" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601933852455" />
-    <state width="1877" height="464" key="GridCell.Tab.0.right" timestamp="1601933852455">
+    <state width="1877" height="351" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602709519699" />
+    <state width="1877" height="351" key="GridCell.Tab.0.right" timestamp="1602709519699">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="491" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601328513325" />
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1600943677424" />
-    <state width="1877" height="464" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601933852455" />
+    <state width="1877" height="351" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602709519699" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1601930574280">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -231,6 +261,10 @@
     </state>
     <state x="2381" y="162" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1600884508811" />
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1601929428090" />
+    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602014376794">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602014376794" />
     <state x="2262" y="132" key="new project wizard" timestamp="1600884419618">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>

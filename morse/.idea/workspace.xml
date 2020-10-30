@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8eb6e07b-d9ec-47c1-b292-f1c3417ffe46" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Morse/UniqueWords.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Morse/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Morse/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Morse/WordTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Morse/WordTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Morse/Words.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Morse/Words.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Morse/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Morse/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Morse/WordTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Morse/WordTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Morse/Words.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Morse/Words.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Morse/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Morse/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -24,14 +24,6 @@ public class Dictionary {
         }
     }
 
-//    public char[] getLetters() {
-//        return letters;
-//    }
-//
-//    public String[] getMorseLetters() {
-//        return morseLetters;
-//    }
-
     public Map<Character, String> getMorseDictionary() {
         return this.morseDictionary;
     }

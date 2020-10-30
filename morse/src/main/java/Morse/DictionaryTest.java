@@ -52,6 +52,19 @@ public class DictionaryTest {
     }
 
     @Test
+    public void testWordNumber() throws IOException {
+        //given
+        File file = new File(this.filename);
+        //when
+        Dictionary morseDictionary = new Dictionary();
+        morseDictionary.WordMorseDictionary(file);
+        Map<String, String> wordMorse = morseDictionary.getWordMorseDictionary();
+
+        //then
+        assertEquals(172823,wordMorse.size());
+
+    }
+    @Test
     public void testGetMorseWord() throws IOException {
         //given
         File file = new File(this.filename);

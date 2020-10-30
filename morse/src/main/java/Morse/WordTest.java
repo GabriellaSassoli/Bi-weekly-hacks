@@ -103,4 +103,48 @@ public class WordTest {
         assertEquals(2,findWord.getBalancedWord(numberOfLetters).size());
 
     }
+
+    @Test
+    public void testGetPalindromeMorseWord() throws IOException {
+        //given
+        Words findWord = new Words(this.filename);
+
+        //when
+        int numberOfLetters = 12;
+
+        //then
+        assertTrue(findWord.getPalindromeMorseWord(numberOfLetters).contains("protectorate"));
+    }
+
+    @Test
+    public void testGetPalindromeMorseWord13() throws IOException {
+        //given
+        Words findWord = new Words(this.filename);
+
+        //when
+        int numberOfLetters = 13;
+
+        //then
+        assertEquals(1,findWord.getPalindromeMorseWord(numberOfLetters).size());
+    }
+
+    @Test
+    public void testGetUniqueSequence() throws IOException {
+        //given
+        Words findWord = new Words(this.filename);
+        int numberOfCharacters = 13;
+
+        //then
+        assertEquals(5,findWord.getUniqueSequence(numberOfCharacters).size());
+    }
+
+    @Test
+    public void testGetUniqueSequenceWord() throws IOException {
+        //given
+        Words findWord = new Words(this.filename);
+        int numberOfCharacters = 13;
+
+        //then
+        assertTrue(findWord.getUniqueSequence(numberOfCharacters).contains("--.---.---.--"));
+    }
 }

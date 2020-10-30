@@ -18,7 +18,8 @@ public class App {
        // Map<String, String> wordMorse = new HashMap<String, String>();
 
 
-        System.out.println("Type:\n1: If you want to encode a word; \n2: If you want the 1st challenge; \n3: If you want to find a morse word with a specific pattern\n4:To find the balanced words");
+        System.out.println("Type:\n1: If you want to encode a word; \n2: If you want to find out how many words a morse word corresponds to ; \n3: " +
+                "If you want to find a morse word with a specific pattern\n4:To find the balanced words\n5: To find the words with a specific length that are palindrome in morse code");
         choice = Integer.parseInt(in.nextLine());
 
         if (choice == 1) {
@@ -34,10 +35,9 @@ public class App {
         else if(choice == 2) {
             System.out.print("Number 2\n");
 
-            //wordMorse = morseDictionary.getWordMorse(words);
             int numberOfWords = 0;
 
-            System.out.println("Type how many words a morse word should corrispond to: ");
+            System.out.println("Type how many words a morse word should correspond to: ");
             if(in.hasNextInt()) {
                 numberOfWords = in.nextInt();
                 System.out.println("The morse word are/is " + findWord.getMorseWord(numberOfWords));
@@ -57,14 +57,23 @@ public class App {
 
             System.out.println("The morse word are/is " + findWord.getWordsContaining(pattern));
         }
-        else if(choice == 4){
+        else if(choice == 4) {
             System.out.println("Number 4");
             int numberOfLetters = 0;
             System.out.println("Type number of letters of the word that has to be balanced: ");
-            if(in.hasNextInt()) {
+            if (in.hasNextInt()) {
                 numberOfLetters = in.nextInt();
                 System.out.println("You have typed " + numberOfLetters);
                 System.out.println("The morse word are/is " + findWord.getBalancedWord(numberOfLetters));
+            }
+        }  else if(choice == 5){
+            System.out.println("Number 5");
+            int numberOfLetters = 0;
+            System.out.println("Type number of letters of the word that has to have a palindrome morse word: ");
+            if(in.hasNextInt()) {
+                numberOfLetters = in.nextInt();
+                System.out.println("You have typed " + numberOfLetters);
+                findWord.getPalindromeMorseWord(numberOfLetters);
             }
             else{
                 System.out.println("Sorry you didn't insert a number");

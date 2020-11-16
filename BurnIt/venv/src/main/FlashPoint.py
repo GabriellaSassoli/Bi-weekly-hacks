@@ -2,7 +2,7 @@
 # 2. update it (controlla prima se x e y sono valide)
 # 4. forma smoke controllando il trasforma cella
 # 3. trasforma la cella e le celle vicine ( forse due diverse funzioni)
-from Cell import *
+from main.Cell import *
 
 class FlashPoint:
 
@@ -21,21 +21,53 @@ class FlashPoint:
 
     def updateBoard(self, x,y):
 
-        print( x > 0  and x < self.width  and y > 0  and y < self.height)
-        if x > 0  and x < self.width and y > 0  and y < self.height:
+        if x > 0  and x < self.height and y > 0  and y < self.width:
             FlashPoint.putSmokeOrFire(self,self.board[x][y],x,y)
             FlashPoint.printBoard(self)
         else:
             print(f"This point ({x},{y}) is invalid ")
 
     def putSmokeOrFire(self, cellValue,x,y):
+        neighbours_symbol = [cell[0] for cell in FlashPoint.neiborhood(self,x,y)]
         if cellValue == 'S':
             self.board[x][y] = 'F'
-        # if cellValue == ' ' #and 'F' in FlashPoint.neiborhood(self,x,y):
-        #     return 'F'
-        if cellValue == ' ': #and 'F' not in FlashPoint.neiborhood(self,x, y):
+            FlashPoint.expandFireStoF(self, x,y)
+            FlashPoint.expandFire_pipe(self,x,y)
+        if cellValue == ' ' and 'F' in neighbours_symbol:
+            self.board[x][y] = 'F'
+            FlashPoint.expandFireStoF(self, x, y)
+            FlashPoint.expandFire_pipe(self, x, y)
+        if cellValue == ' ' and 'F' not in neighbours_symbol:
             self.board[x][y] = 'S'
-        
+            FlashPoint.expandFire_pipe(self, x, y)
+
+
+    def expandFireStoF(self,x,y):
+        neighbours = FlashPoint.neiborhood(self, x, y)
+        for index in range(0, len(neighbours)):
+            if 'S' in neighbours[index][0]:
+                x = neighbours[index][1]
+                y = neighbours[index][2]
+                self.board[x][y] = 'F'
+                FlashPoint.expandFireStoF(self,x,y)
+
+    def expandFire_pipe(self,x,y):
+        cells = FlashPoint.neiborhood(self, x, y)
+        cells.append((self.board[x][y],x,y))
+
+        for index in range(0, len(cells)):
+            if '_' in cells[index][0]:
+                if y > cells[index][2]:
+                    self.board[x][cells[index][2] - 1 ] = 'F'
+                if y < cells[index][2]:
+                    self.board[x][cells[index][2] + 1] = 'F'
+            if '|' in cells[index][0]:
+                if y > cells[index][2]:
+                    self.board[x][cells[index][2] - 1 ] = 'F'
+                if y < cells[index][2]:
+                    self.board[x][cells[index][2] + 1] = 'F'
+
+
     ## return  'F' if cellValue == 'S' else 'S' if cellValue == ' ' else cellValue
     ### here we are missing to considerate if smoke is next to fire and if is next to an open door.
 
@@ -43,18 +75,21 @@ class FlashPoint:
         neighbors = []
 
         if x > 0:
-            neighbors.append(Cell(self.board[x-1][y], x-1,y))
-        if x < self.width - 1:
-            neighbors.append(Cell(self.board[x+1][y], x + 1,y))
+           # Cell(self.board[x - 1][y], x - 1, y)
+            neighbors.append((self.board[x - 1][y], x - 1, y))
+        if x < self.height - 1:
+            neighbors.append((self.board[x + 1][y], x + 1, y))
         if y > 0:
-            neighbors.append(Cell(self.board[x][y - 1], x , y-1 ))
-        if y > self.height - 1:
-            neighbors.append(Cell(self.board[x][y + 1], x, y + 1))
+            neighbors.append((self.board[x][y - 1], x , y - 1))
+        if y < self.width - 1:
+            neighbors.append((self.board[x][y + 1], x, y + 1))
 
         return neighbors
 
     def printBoard(self):
-        print("print board")
+
         for x in range(0,self.height):
-            #for y in range(0, self.height):
             print(''.join(self.board[x]))
+
+    def getBoard(self,x,y):
+        return self.board[x][y]
